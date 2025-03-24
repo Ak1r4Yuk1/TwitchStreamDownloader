@@ -1,64 +1,71 @@
 # TwitchStreamDownloader
 
-Questo script PowerShell ti permette di scaricare le live di Twitch in modo semplice e veloce.
+Questo script PowerShell ti permette di scaricare le live di Twitch utilizzando `ffmpeg`.
 
 ## Prerequisiti
 
 * PowerShell (incluso in Windows)
-* [yt-dlp](https://github.com/yt-dlp/yt-dlp) (assicurati di averlo installato e nel PATH di sistema)
+* [ffmpeg](https://ffmpeg.org/)
 
-## Installazione
+## Installazione di ffmpeg
 
-1.  **Clona la repository:**
+### Tramite Chocolatey
 
-    ```bash
-    git clone [https://github.com/Ak1r4Yuk1/TwitchStreamDownloader.git](https://www.google.com/search?q=https://github.com/Ak1r4Yuk1/TwitchStreamDownloader.git)
-    ```
+`choco install ffmpeg`
 
-2.  **Entra nella cartella del progetto:**
+### Tramite Winget
 
-    ```bash
-    cd TwitchStreamDownloader
-    ```
+`winget install ffmpeg`
 
-## Utilizzo
+### Installazione manuale
 
-Puoi avviare lo script in due modi:
+1.  Vai su [ffmpeg](https://ffmpeg.org/download.html).
+2.  Scarica la versione per il tuo sistema operativo.
+3.  Estrai l'archivio e aggiungi la cartella `bin` al PATH.
 
-1.  **Tramite terminale PowerShell:**
+### Post-installazione di ffmpeg: Aggiunta al PATH di sistema.
 
-    * Apri PowerShell nella cartella del progetto.
-    * Esegui lo script:
+1.  Trova la directory `bin` di `ffmpeg`.
+2.  Cerca "variabili d'ambiente di sistema" nel menu di avvio.
+3.  Clicca su "Variabili d'ambiente...".
+4.  Seleziona "Path" e clicca su "Modifica...".
+5.  Clicca su "Nuovo" e aggiungi il percorso di `bin`.
+6.  Clicca su "OK".
+7.  Verifica: apri PowerShell e digita `ffmpeg -version`.
 
-    ```powershell
-    powershell TwitchDownloader.ps1
-    ```
+## Installazione e Utilizzo dello Script
 
-2.  **Tramite interfaccia grafica (GUI):**
+1.  Clona la repository:
 
-    * Clicca con il tasto destro del mouse sul file `TwitchDownloader.ps1`.
-    * Seleziona "Esegui con PowerShell".
+    `git clone https://github.com/Ak1r4Yuk1/TwitchStreamDownloader.git`
+
+2.  Entra nella cartella:
+
+    `cd TwitchStreamDownloader`
+
+3.  Esegui lo script:
+
+    * Tramite terminale:
+
+        `powershell TwitchDownloader.ps1`
+
+    * Tramite GUI: clicca destro su `TwitchDownloader.ps1` e seleziona "Esegui con PowerShell".
 
 ## Funzionalità
 
 * Download di live di Twitch tramite URL.
-* Interfaccia utente semplice e intuitiva.
-* Automatizzazione del download tramite yt-dlp.
+* Interfaccia semplice.
+* Utilizzo di `ffmpeg`.
 
 ## Note
 
-* Assicurati di avere una connessione internet stabile durante il download.
-* Il tempo di download dipende dalla lunghezza della live e dalla velocità della tua connessione.
-* Assicurati che yt-dlp sia aggiornato per una migliore compatibilità.
+* Connessione internet stabile.
+* Il tempo di download dipende dalla lunghezza della live.
 
 ## Contributi
 
-Se trovi bug o hai suggerimenti per migliorare lo script, sentiti libero di aprire una issue o inviare una pull request.
+Issue o pull request sono benvenute.
 
 ## Licenza
 
-Questo progetto è rilasciato sotto la licenza MIT.
-
-## Ringraziamenti
-
-* [yt-dlp](https://github.com/yt-dlp/yt-dlp) per il potente strumento di download.
+MIT
